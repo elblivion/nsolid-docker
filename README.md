@@ -9,4 +9,9 @@ This provides the docker images that make it easier to run nsolid in docker. Thi
 Here's [example](/example) of how to tie it all together using Google App Engine.
 
 
+## Running the console & hub
 
+```
+docker run -p 4001:4001 -p 9000:9000 --name nsolid_hub contentful/nsolid-hub
+docker run -p 3000:8080 --link nsolid_hub:hub contentful/nsolid-console
+```

@@ -6,7 +6,7 @@ RUN apt-get update -y && apt-get install --no-install-recommends -y -q curl pyth
     apt-get clean && rm /var/lib/apt/lists/*_*
 
 # Install nsolid
-RUN mkdir /nodejs && curl https://nsolid-download.nodesource.com/download/nsolid-node/release/v1.0.2/nsolid-v1.0.2-linux-x64.tar.gz| tar xvzf - -C /nodejs --strip-components=1
+RUN mkdir /nodejs && curl https://nsolid-download.nodesource.com/download/nsolid-node/release/v1.2.1/nsolid-v1.2.1-linux-x64.tar.gz| tar xvzf - -C /nodejs --strip-components=1
 
 # Set env vars
 ENV PATH $PATH:/nodejs/bin
